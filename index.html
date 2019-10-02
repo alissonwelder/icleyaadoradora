@@ -16,11 +16,28 @@
         <title>Icleya Adoradora - Site Oficial</title>
 
 
-        <!-- Favicon -->
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
 
-        <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900,800' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,900,700,500,300' rel='stylesheet' type='text/css'>
+jQuery("#subirTopo").hide();
+
+jQuery('a#subirTopo').click(function () {
+         jQuery('body,html').animate({
+           scrollTop: 0
+         }, 800);
+        return false;
+   });
+
+jQuery(window).scroll(function () {
+         if (jQuery(this).scrollTop() > 1000) {
+            jQuery('#subirTopo').fadeIn();
+         } else {
+            jQuery('#subirTopo').fadeOut();
+         }
+     });
+});
+</script>
 
 		
         <!--
@@ -55,7 +72,7 @@
         </div>
         <header class="site-header navbar-fixed-top navbar-default">
             <div class="container">
-               
+                
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -64,7 +81,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                        <span>Icleya Adoradora</span>
+                        <div class="logo">Icleya Adoradora</div>
                     
                 </div>
                 
@@ -147,7 +164,7 @@
             
                                         </div>
                                         <h4 class="heading">Cantora</h4>
-                                        <p class="description">Agendas em igreja, casamentos,            aniversários, formaturas e congresso.</p>
+                                        <p class="description">Agendas em igreja, casamentos, aniversários, formaturas e congresso.</p>
                                     </div>
                                 </div>
                                 
@@ -286,13 +303,13 @@
                                 <div class="title fadeInDown">
                                     <h2>VideoClipe</h2>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 "></div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 "></div>
                                     <!-- Set up your HTML -->
                                     <div class="testimonial-slider">
                                      
                                             <div class="embed-container"> 
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nhXVtyvBEsU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                                                    </div>
+                                                    <iframe width="300" height="250" src="https://www.youtube.com/embed/nhXVtyvBEsU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                                            </div>
 
                                         
                                         </div>
@@ -311,11 +328,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="title fadeInDown">
-                                    <h2>Rede Sociais</h2>
+                                    <h2>Contatos</h2>
                                     
                                 </div>
                                 <div class="col-xs-12 col-sm-8 col-md-8">
-                                    
+                                    Email: icleya@gmail.com
                                    <!-- <div  class="contact-form" method="post">
                                         <input type="text" name="name" id="name" placeholder="Nome">
                                         <input type="email" name="email" id="email" placeholder="Email">
@@ -325,24 +342,23 @@
             
                                         <button type="submit"  class="btn btn-theme-color">Enviar</button>
                                     </div>-->
-                                    
-
-                                        
-                                        <a href="https://wa.me/554498939526?text=Olá" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;
-                                        z-index:1000;" target="_blank">
-                                        <i style="margin-top:16px" class="fab fa-whatsapp-square"></i>
-                                        </a>
-                                </div>
+                                    </div>
                                 
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                
                                     <div class="fb-page" data-href="https://www.facebook.com/Adoradora.IcleyaOficial/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Adoradora.IcleyaOficial/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Adoradora.IcleyaOficial/">Adoradora Icleya</a></blockquote></div>
+
                                 
-                            </div>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>
         </section>
+                    <a href="https://wa.me/554498939526?text=Olá" style="position:fixed;width:60px;height:60px;bottom:40px;left:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;
+                    z-index:1000;" target="_blank">
+                    <i style="margin-top:16px" class="fab fa-whatsapp-square"></i>
+                    </a>
         <!-- // contact -->
 
         <footer class="footer" >
@@ -365,6 +381,9 @@
                     <p>Copyright: Alisson Welder, All Rights Reserved.</p>
                 </div>
             </div>
+            <a id="subirTopo">
+                <i class="fas fa-angle-double-up"></i>
+              </a>
         </footer>
 
 
@@ -389,6 +408,7 @@
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0&appId=178939735516900&autoLogAppEvents=1"></script>
         <script src="js/scroll.js"></script>
+        <script src="js/video.js"></script>
         
         
     </body>
